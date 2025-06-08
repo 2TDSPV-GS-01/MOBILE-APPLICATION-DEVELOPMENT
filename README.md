@@ -1,59 +1,43 @@
 # FonteViva
 
-O **FonteViva** é um aplicativo mobile desenvolvido para monitorar a qualidade da água de forma clara e eficiente. Ele se conecta a sensores físicos que coletam dados em tempo real, como pH, turbidez e temperatura da água.
+O **FonteViva** é um aplicativo mobile desenvolvido com **React Native** e **Expo**, integrado a uma API desenvolvida em **.NET**, com o objetivo de monitorar em tempo real a qualidade da água de ambientes naturais ou controlados.
 
-O objetivo do app é oferecer uma visualização prática desses dados, ajudando usuários a entender o estado da água monitorada, detectar alterações e agir com base nas informações apresentadas.
+## Descrição do Projeto
 
----
+O aplicativo é capaz de se conectar a sensores físicos que coletam dados como **pH**, **turbidez** e **temperatura** da água. Esses dados são enviados para uma API, onde ficam armazenados e podem ser acessados pelo app. A visualização é rápida, clara e acessível, permitindo que os usuários acompanhem os parâmetros ambientais e identifiquem possíveis alterações prejudiciais.
+
+O app oferece uma experiência amigável, com um layout escuro, minimalista e voltado para a funcionalidade.
 
 ## Funcionalidades
 
-- Visualização dos dados mais recentes dos sensores
-- Tela de registros com histórico de medições
-- Explicação dos parâmetros coletados (pH, turbidez, temperatura)
-- Seções com informações sobre o funcionamento do aplicativo e ajuda para interpretação dos dados
-
----
+- Tela inicial de boas-vindas (SplashScreen)
+- Dashboard com as últimas medições dos sensores
+- Listagem completa dos registros enviados pela API
+- Possibilidade de editar e excluir registros existentes
+- Tela de informações sobre o projeto
+- Tela de ajuda e contato
 
 ## Tecnologias Utilizadas
 
-- **React Native com Expo** para a interface mobile
-- **TypeScript** para maior organização e segurança no código
-- **Axios** para consumo de API REST
-- **.NET** no backend para fornecimento dos dados (não incluído neste repositório)
+- **React Native**
+- **Expo**
+- **TypeScript**
+- **React Navigation**
+- **Axios**
+- **Styled-Components**
+- **.NET Core (API REST)**
 
----
+## Organização do Código
 
-## Como Executar o App
+- `components/`: componentes reutilizáveis como cards
+- `screens/`: telas do app (Dashboard, Registros, Ajuda, Sobre)
+- `routes/`: configuração de navegação entre telas
+- `services/`: integração com a API via Axios
+- `styles/`: tema e estilos globais
+- `assets/`: imagens e ícones
 
-1. Clone o repositório:
+## Como executar o projeto
 
-- git clone https://github.com/2TDSPV-GS-01/MOBILE-APPLICATION-DEVELOPMENT
-
-
-2. Acesse a pasta do projeto:
-
-- cd MOBILE-APPLICATION-DEVELOPMENT/FonteViva
-   
-
+1. Clone este repositório
+2. No terminal, navegue até a pasta do projeto
 3. Instale as dependências:
-
-- npm install axios
-- npm install styled-components
-- npm install @react-navigation/native
-- npm install @react-navigation/native-stack
-- npm install react-native-screens react-native-safe-area-context
-- npm install react-native-gesture-handler react-native-reanimated
-- npm install expo
-
-4. Inicie o projeto:
-
-- npx expo start
- 
-
-5. Inicie o projeto a partir do celular utilizando o qr code, ou utilizano um emulador
-
-## Observações
-
-- Este aplicativo depende de uma API externa desenvolvida em .NET para funcionar corretamente.
-- Link da API .NET: https://github.com/2TDSPV-GS-01/ADVANCED-BUSINESS-DEVELOPMENT-WITH-.NET
