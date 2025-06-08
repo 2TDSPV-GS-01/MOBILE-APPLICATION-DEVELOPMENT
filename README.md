@@ -41,3 +41,26 @@ O app oferece uma experiência amigável, com um layout escuro, minimalista e vo
 1. Clone este repositório
 2. No terminal, navegue até a pasta do projeto
 3. Instale as dependências:
+
+- npm install
+
+4. Inicie o projeto com:
+
+- npx expo start
+
+- Certifique-se de que a **API .NET** esteja rodando localmente no endereço:
+- Link da nossa API .NET: https://github.com/2TDSPV-GS-01/ADVANCED-BUSINESS-DEVELOPMENT-WITH-.NET
+
+## Informações do Grupo
+
+**Curso:** Análise e Desenvolvimento de Sistemas  
+**Disciplina:** Mobile Application Development
+
+**Integrantes do Grupo:**
+- Francesco Di Benedetto RM: RM557313
+- Nathalia Gomes da Silva RM: RM554945
+- Gustavo Goulart Bretas RM: RM555708
+  
+## Link do vídeo de apresentação
+
+[Assista aqui](https://youtu.be/yJc41Vq_L8Q)
