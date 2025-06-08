@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import { theme } from '../styles/theme';
 
 interface Props {
   label: string;
   value: string;
-  statusColor?: string;
 }
 
 const Card = styled.View`
@@ -17,22 +15,26 @@ const Card = styled.View`
 `;
 
 const Label = styled.Text`
-  font-size: ${theme.fontSize.subtitle}px;
-  color: ${theme.colors.text};
+  font-size: 24px;
+  color: #FFFFFF; /* branco forçado */
+  font-weight: bold;
   margin-bottom: 4px;
 `;
 
-const Value = styled.Text<{ statusColor?: string }>`
-  font-size: ${theme.fontSize.title}px;
-  font-weight: bold;
-  color: ${(props) => props.statusColor || theme.colors.primary};
+const Value = styled.Text<{ isNA?: boolean }>`
+  font-size: ${(props) => (props.isNA ? 16 : 18)}px;
+  font-weight: ${(props) => (props.isNA ? 'normal' : 'bold')};
+  color: #1E88E5; /* branco forçado */
 `;
 
-export default function SensorCard({ label, value, statusColor }: Props) {
+export default function SensorCard({ label, value }: Props) {
+  const isInvalid = value === '11' || value.toUpperCase() === 'N/A';
+  const displayValue = isInvalid ? 'N/A' : value;
+
   return (
     <Card>
       <Label numberOfLines={1}>{label}</Label>
-      <Value statusColor={statusColor} numberOfLines={1}>{value}</Value>
+      <Value numberOfLines={1} isNA={isInvalid}>{displayValue}</Value>
     </Card>
   );
 }

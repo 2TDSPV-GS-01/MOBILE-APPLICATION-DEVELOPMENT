@@ -42,15 +42,6 @@ export default function RecordsScreen({ navigation }: any) {
     <View style={styles.card}>
       <Text style={styles.label}>{getSensorLabel(item.idSensor)}: <Text style={styles.value}>{item.resultado}</Text></Text>
       <Text style={styles.date}>Data: {new Date(item.dtRegistro).toLocaleString()}</Text>
-
-      <View style={styles.buttonRow}>
-        <TouchableOpacity style={styles.editButton} onPress={() => navigation.navigate('EditRecord', { item })}>
-          <Text style={styles.buttonText}>Editar</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.deleteButton} onPress={() => deleteRecord(item.id)}>
-          <Text style={styles.buttonText}>Excluir</Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 
