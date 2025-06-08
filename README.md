@@ -28,7 +28,7 @@ O objetivo do app é oferecer uma visualização prática desses dados, ajudando
 
 1. Clone o repositório:
 
-- git clone https://github.com/2TDSPV-GS-01/MOBILE-APPLICATION-DEVELOPMENT.git
+- git clone https://github.com/2TDSPV-GS-01/MOBILE-APPLICATION-DEVELOPMENT
 
 
 2. Acesse a pasta do projeto:
